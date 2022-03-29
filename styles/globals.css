@@ -1,16 +1,79 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+:root {
+	--navy: #0d1120;
+	--gold: #c79810;
+}
+
+*,
+::after,
+::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/* outline: 1px dotted red; */
+}
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+body {
+	background-color: var(--navy);
+	color: aliceblue;
+}
+
+.wrapper {
+	width: 1280px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.site-header {
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px dotted var(--gold);
+}
+
+.main-nav {
+	list-style: none;
+	display: flex;
+	color: #c79810;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+.main-nav a {
+	padding: 1rem;
+	transition: color 0.5s ease-in;
+}
+
+.main-nav a:hover {
+	color: white;
+}
+
+.site-footer {
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-top: 1px dotted var(--gold);
+}
+
+.elpico {
+	padding: 1rem;
+	background-color: var(--gold);
+	margin-bottom: 1rem;
+	border-radius: 0.5rem;
+	transition: border-left 0.25s ease-in-out;
+}
+
+.elpico:hover {
+	border-left: 0.5rem solid red;
 }
